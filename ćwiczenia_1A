@@ -1,0 +1,167 @@
+\documentclass[12pt]{mwart}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+\usepackage{enumitem}
+\usepackage{indentfirst}
+\usepackage{fancyhdr}
+\usepackage{titletoc}
+\usepackage{tocloft}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+
+
+\renewcommand{\thesubsection}{\thesection.\Alph{subsection}}
+\renewcommand{\thesection}{\arabic{section}}
+% \renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}} % for chapters
+% \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+\renewcommand{\contentsname}{Spis treści}
+\dottedcontents{section}[0em]{\bfseries}{1em}{1pc}
+\dottedcontents{subsection}[2em]{}{2em}{1pc}
+
+\setlength{\topmargin}{-0,5cm}
+\setlength{\oddsidemargin}{0cm}
+\setlength{\textheight}{23cm}
+\setlength{\textwidth}{16cm}
+\setlength{\itemsep}{12pt}
+\setlength{\parindent}{20pt}
+
+ 
+\begin{document}
+
+ 
+\fontsize{12pt}{20pt}
+\selectfont
+
+\begin{center}
+    \large Anna Loranty \\
+    \vspace{10pt}
+    \huge Materiały do ćwiczeń \\
+    \vspace{30pt}
+    \fontsize{12pt}{20pt}
+    \selectfont
+    \textbf{Streszczenie} \\
+\end{center}
+
+ We wstępie znajdziesz dodatkowe informacje potrzebne do składu tekstu. Niesformatowany tekst znajdziesz w pliku materialyA-bez-polecen.tex.
+
+\section{Wstęp}
+Dodatkowe informacje:
+
+\begin{itemize}[label ={--},leftmargin =20pt]
+\itemsep -5pt
+\item zastosowana klasa \emph{mwarf};
+\item czcionka w całym dokumencie to 12pt;
+\item wysokość tekstu to 23cm;
+\item szerokość tekstu to 16cm;
+\item oddsidemargin ustawiony jest na 0;
+\item topmargin ustawiony jest na -0.5cm;
+\item odstępy między wierszami ustawione są na 20pt;
+
+\end{itemize}
+
+\section{Relacje}
+\subsection{Relacja równoważności}
+
+ Niech $\approx$ będzie relacją równoważności w $X \neq \emptyset$. Dla każdego elementu $x \in X$ niech $||x||$ oznacza zbiór tych wszystkich elementów $y \in X$, które pozostają z $x$ w relacji $\approx$, czyli takich, dla których spełniony jest warunek $x \approx y$. Tak więc z definicji
+\setenumerate[1]{label={(\arabic*)}}
+    \begin{enumerate}
+        \item $||x|| = \{y \in Y : x \approx y \},$
+        \item $(y \in ||x||) \Leftrightarrow (x \approx y)$
+    \end{enumerate}
+
+Zbiory $||x||$ dla $x \in X$ nazywamy \textit{klasami równoważności} relacji $\approx$ w $X$.
+
+\subsection{Relacje porządkujące}
+
+
+Relację $p \subset X x X$ nazywamy \textbf{porządkującą}\footnote{relacja ta jest przez niektórych autorów nazywana relacją \textit{częściowo porządkującą}}
+zbiór $X$, jeśli jest zwrotna, antysymetryczna i przechodnia. Jeśli dodatkowo relacja ta spełnia warunek
+\begin{equation}    
+\displaystyle\mathop{\forall}_{x,y \in X} (xpy \vee ypx) \tag{\thesection .1}
+\end{equation}
+
+
+\noindent to nazywamy ją relacją \textbf{linionowo porządkującą} zbiór $X$. \\ \\
+\textbf{Definicja 2.1} ([H.R.]).)\normalsize
+Mówimy, że zbiór $X$ jest liniowo uporządkowany gęsto przez realcją $\leq$, jeśli  $\leq$ jest relacją porządkującą, spełniającą warunek $(2.1)$ oraz dla każdej pary elementów $x,y \in X$ spełniony jest warunek
+
+\[
+(x \in y) \Rightarrow \displaystyle\mathop{\exists}_{x \in X} (x \leq z \leq y).
+\]
+
+\section{Rachunek zdań}
+Reguły oderwania dla równoważności:
+\begin{equation}    
+\frac{\alpha, \alpha \Leftrightarrow \beta}{\beta}, \hspace{15pt} \frac{\beta,\alpha \Leftrightarrow \beta}{\alpha} \tag{\thesection .1}
+\end{equation}
+
+\subsection{Niektóre prawa rachunku zdań}
+Poniżej wybrane prawa rachunku zdań:
+%próbka\
+\begin{equation}
+    \begin{aligned}
+    (\alpha \Rightarrow \beta) &\Leftrightarrow (\sim \alpha \vee \beta), \\
+    (\alpha \vee \beta) &\Leftrightarrow (\sim \alpha \Rightarrow \beta), \\
+    (\sim \alpha &\Rightarrow \alpha) \Rightarrow \alpha\text{\footnote{prawo Claviusa}}
+    \end{aligned} \tag{\thesection .2} 
+\end{equation}
+\footnotetext[2]{prawo Claviusa}
+
+\noindent I prawa rachunku zdań znane przez każdego:
+\begin{equation}    
+\left.
+    \begin{aligned}    
+    \sim (a \wedge \beta \Leftrightarrow (\sim \alpha\vee \sim \beta)& \\
+    \sim (a \vee \beta   \Leftrightarrow (\sim \alpha \wedge \sim\beta)& 
+    \end{aligned}
+\right \} \text{prawa de` Morgana} \tag{\thesection .3}
+\end{equation}
+
+
+\section{Funkcje}
+\noindent\textbf{Definicja 4.2.} Niech $\langle s \rangle $ Mówimy, że funkcja $f : \mathbb{R} \rightarrow \mathbb{R}$ jest funkcją $\langle s \rangle$ - ciągłą, jeśli $f \in \displaystyle\mathop{\mathcal{C}_{\mathcal{T}_\langle s \rangle}^{\mathcal{T}_\langle s \rangle}}$.
+\newpage
+
+\noindent \textbf{Uwaga 4.3.} Niech $\langle s \rangle \in S.$ Jeżeli $f : \mathbb{R} \rightarrow \mathbb{R}$  jest funkcją $\langle s \rangle$- ciągłą, to $f$ jest funkcją $\langle s \rangle$ - aproksymatywnie ciągłą.\\
+
+Udowodnimy teraz twierdzenie przydatne w dalszej części tego rozdziału.\\
+
+\noindent \textbf{Twierdzenie 4.4} Niech $\mathcal{T}$ będzie topologią taką, że $\mathcal{T}_0 \subset \mathcal{T}$ oraz niech $\mathcal{T}_1$ będzie dowolną topologią. Wówczas system $(\displaystyle\mathop{\mathcal{C}_{\mathcal{T}_\langle s \rangle}^{\mathcal{T}_\langle s \rangle}},(max(\cdot),min(\cdot))$ jest kratą (gdzie $max(\cdot),min(\cdot)$ oznacza odpowiednio $max\{f,g\}$ dla $f,g \in \displaystyle\mathop{\mathcal{C}_{\mathcal{T}_\langle s \rangle}^{\mathcal{T}_\langle s \rangle_1}}$).\\
+
+\noindent\textbf{Wniosek 4.5.} Niech $\langle s \rangle \in S$ Wówczas $(\displaystyle\mathop{\mathcal{C}_{\mathcal{T}_\langle s \rangle}^{\mathcal{T}_\langle s \rangle}},(max(\cdot),min(\cdot))$ jest kratą.\\
+
+\noindent\textbf{Twierdzenie 4.6.} Niech $\langle s \rangle \in S$ Jeżeli funkcja $f : \mathbb{R} \rightarrow \mathbb{R}$ jest $\langle s \rangle$ - ciągła, to $f$ jest funkcją \textit{Baire*1}\\
+
+\noindent\textit{Dowód.} Niech $ \langle s \rangle \in S $Przypuśćmy, że $f$ nie jest funkcją \textit{Baire*1.} Zatem istnieje $\mathcal{T}_0 -$ doskonały zbiór $P$ taki, że na każdej porcji $Q$ zbioru $P$ funkcja ${f}_{|Q}$ ma punkt nieciągłości. Rozważmy zbiór
+\[
+    Z = \{x \in P : f_{|P} \text{ nie jest ciągła w punkcie } x\}.
+\]
+
+Zbiór $Z$ jest oczywiście gęsty w $P$. Pokażemy, że istnieje punkt $ \in P$ w którym funkcja $f$ nie jest $\langle s \rangle-$ ciągła. W tym celu skonstruujemy indukcyjnie ciąg $\{x_{n}\}_{n \in \mathbb{N}} \subset P$  ciągi przedziałów domkniętych $\{J_{n}\}_{n \in \mathbb{N}},\{I_{n}\}_{n \in \mathbb{N}}$ ciągi przedziałów domkniętych oraz podciąg $\{s_{k_{n}}\}_{n \in \mathbb{N}}$ ciągu $\{s_{n}\}_{n \in \mathbb{N}}$ takie, że
+\begin{enumerate} [label = {(\roman*)}]
+    \item 
+    \item
+    \item
+    \item
+    \item
+    \item
+\end{enumerate}
+
+Aby skonstruować zapowiadane powyżej ciągi weźmy dowolny punkt $x_{1} \in Z.$  (...)
+
+\flushright itd.
+$\Box$
+\flushleft
+\large \textbf{Literatura}\\
+\normalsize
+[H.R] H. Rasiowa, \textit{"Wstęp do matematyki współczesnej"}, Warszawa 1990. \\
+
+[S.Ł] S. Łojasiewicz, \textit{"Wstęp do teorii funkcji rzeczywistych"}, Warszawa 1973.
+
+\tableofcontents
+Dodatkowe informacje:\\
+
+\end{document}
